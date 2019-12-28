@@ -1,0 +1,32 @@
+<div class="card col-sm-4">
+
+    <div class="card-header bg-primary text-light">
+      Cadastrar Contato
+    </div>
+
+    <div class="card-body">
+      
+        <form #form="ngForm" (ngSubmit)="onSubmit(contato)">
+
+          <input type="hidden" name="id" #id="ngModel" [(ngModel)]="contato.id">
+
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="contato.nome"  placeholder="Digite um nome">
+            </div>
+        
+            <div class="form-group">
+              <label for="telefone">Telefone</label>
+              <input type="text" class="form-control" id="telefone" name="telefone" [(ngModel)]="contato.telefone" placeholder="Digite um telefone">
+            </div>
+        
+            <button type="submit" class="btn btn-primary" >Salvar</button>
+          
+        </form>
+
+    </div>
+
+  </div>
+
+<app-lista-contatos [listaContatoRecebido]="listaContato" (editContatoEvent)="editarContatoForm($event)" (deletarContatoEvent)="deletarContatoLista($event)"></app-lista-contatos>
+

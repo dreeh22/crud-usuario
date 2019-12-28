@@ -1,0 +1,43 @@
+
+
+<div class="card col-sm-7" >
+
+    <div class="card-header bg-primary text-light">
+      Contatos
+    </div>
+
+    <div class="card-body"> 
+            
+              <table class="table table-hover">
+            
+                  <thead>
+                      <tr>
+                          <th>Nome</th>
+                          <th>Telefone</th>
+                          <th>Ações</th>
+                      </tr>
+                  </thead>
+            
+                  <tbody>
+                      <tr *ngFor="let contato of listaContatoRecebido">
+                          <td>{{contato.nome}}</td>
+                          <td>{{contato.telefone}}</td>
+                          <td>
+
+                              <button class="btn btn-primary botao-editar">
+                                <i class="fas fa-edit " (click)="edit(contato)"></i>
+                              </button>
+
+                              <button class="btn btn-danger botao-deletar">
+                                <i class="fas fa-trash-alt" (click)="delet(contato)"></i>
+                              </button>
+
+                          </td>
+                      </tr>
+                  </tbody>
+            
+              </table>
+       
+    </div>
+
+  </div>
