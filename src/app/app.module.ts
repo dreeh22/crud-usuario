@@ -8,6 +8,10 @@ import { FormsModule } from "@angular/forms";
 import { LocalStorageModule } from "angular-2-local-storage";
 import { ListaContatosComponent } from './lista-contatos/lista-contatos.component';
 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ContatoService } from './services/contato.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,14 +19,15 @@ import { ListaContatosComponent } from './lista-contatos/lista-contatos.componen
     ListaContatosComponent
   ],
   imports: [
-    BrowserModule,
+  BrowserModule,
     AppRoutingModule,
     FormsModule,
     LocalStorageModule.forRoot({
       storageType: 'localStorage'
-  })
+  }),
+  BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [ContatoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

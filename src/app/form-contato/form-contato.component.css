@@ -6,3 +6,13 @@
     float:left;
     padding: 0;
 }
+
+.alert{
+    margin-left:2.5%;
+    margin-right:2.5%;
+    margin-top:1%;
+}
+
+.ng-invalid.ng-touched:not(form){
+    border: solid 1px #ff0000;
+}
